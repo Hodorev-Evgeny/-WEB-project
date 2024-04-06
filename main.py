@@ -12,10 +12,16 @@ def index():
 
 @app.route('/home')
 def home():
-    return 'ddddd'
+    return flask.render_template('chat2.html')
+
+
+@app.route('/settings')
+def settings():
+    return flask.render_template('settings.html')
+
 
 
 if __name__ == '__main__':
     db_session.global_init('db/data.db')
-    app.run('', port=5000)
+    app.run(port=20000, host='127.0.0.1')
 
