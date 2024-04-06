@@ -10,12 +10,12 @@ def index():
     return flask.render_template('chat.html')
 
 
-@app.route('/home'):
+@app.route('/home')
 def home():
-
+    return 'ddddd'
 
 
 if __name__ == '__main__':
     db_session.global_init('db/data.db')
-    app.run('', port=5000, debug=True)
+    app.run('', port=5000)
 
